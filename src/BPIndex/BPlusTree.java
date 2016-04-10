@@ -187,7 +187,7 @@ public class BPlusTree implements Serializable{
 				ptrs[i].parent = curr;
 			}
 			if(!(curr.equals(root)))
-			insertInternaly(newKey, curr.parent, futChild, curr);
+			insertInternaly(newKey, curr.parent, futChild, curr);	//Recursive call
 			else{
 				INode futRoot = new INode(maxKeys, maxPtrs, null);
 				futRoot.insert(newKey, null);
